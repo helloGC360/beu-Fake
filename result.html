@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>. : BEU, Patna - Results website : .</title>
+  <style type="text/css">
+    *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+    #form1 {
+      width: 100vw;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .style1 {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid #999999;
+    }
+
+    .searchalign {
+      margin-top: 2px;
+      position: relative;
+    }
+
+    @font-face {
+      font-family: KrutiDev010;
+      src: url("resstyles/KrutiDev010.ttf");
+    }
+
+    .gc {
+      width: 100vw;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .vd {
+      min-width: 300px;
+      height: 400px;
+      max-width: 400px;
+      border: 2px solid;
+      background-size: cover;
+      display: none;
+    }
+
+    .ld {
+      color: green;
+    }
+
+    .btn {
+      max-width: 200px;
+      min-width: 100px;
+      height: 40px;
+      color: green;
+       display: none;
+    }
+
+    .bu{
+      color: rgba(0,0,0,0.1);
+      display: none;
+    }
+
+
+  </style>
+  <link href="resstyles/layout.css" rel="stylesheet" type="text/css" />
+  <link href="resstyles/menu.css" rel="stylesheet" type="text/css" />
+  <link href="resstyles/tables.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body id="top">
+  <div id="form1">
+    <div class="wrapper row1">
+      <div id="header" class="clear">
+        <div class="fl_left" style="margin-top:5px;">
+          <h1>
+            <a href="Default.aspx">
+              <img src="BEUP_ENlogo1.png" width="85%" alt="Bihar Engineering University, Patna" />
+            </a>
+          </h1>
+        </div>
+        <div class="fl_right" style="margin-top:10px; margin-right:10px"></div>
+      </div>
+    </div>
+    <div class="gc">
+      <p class="ld" id="p">loading...</p>
+      <button class="btn" onclick="play()" id="btn">view result</button>
+      <video class="vd" src="./bhk.mp4" type="mp4" id="vd"></video>
+      <br>
+      <br>
+      <br><br>
+      <p class="bu" id="me">made by - helloGC <br>Just for fun😂👍</p>
+    </div>
+
+  </div>
+  <script>
+
+    var vd = document.getElementById("vd");
+    var p = document.getElementById("p");
+    var bt = document.getElementById("btn");
+    var me=document.getElementById("me");
+    setTimeout(() => {
+      p.style.display = "none";
+      me.style.display = "none";
+      vd.style.display = "none";
+      bt.style.display = "block";
+
+    }, 3000);
+
+    function play() {
+      bt.style.display = "none";
+      vd.style.display = "block";
+      me.style.display = "block";
+      vd.play();
+    }
+  </script>
+</body>
+
+</html>

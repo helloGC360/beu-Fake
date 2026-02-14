@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>. : BEU, Patna - Results website : .</title>
+  <style type="text/css">
+    .style1 {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid #999999;
+    }
+    .searchalign {
+      margin-top: 2px;
+      position: relative;
+    }
+    @font-face {
+      font-family: KrutiDev010;
+      src: url("resstyles/KrutiDev010.ttf");
+    }
+  </style>
+  <link href="resstyles/layout.css" rel="stylesheet" type="text/css" />
+  <link href="resstyles/menu.css" rel="stylesheet" type="text/css" />
+  <link href="resstyles/tables.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body id="top">
+  <div  id="form1">
+    <div class="wrapper row1">
+      <div id="header" class="clear">
+        <div class="fl_left" style="margin-top:5px;">
+          <h1>
+            <a href="Default.aspx">
+              <img src="BEUP_ENlogo1.png" width="85%" alt="Bihar Engineering University, Patna" />
+            </a>
+          </h1>
+        </div>
+        <div class="fl_right" style="margin-top:10px; margin-right:10px"></div>
+      </div>
+    </div>
+
+    <div class="wrapper row3">
+      <div class="rnd">
+        <div id="container" class="clear">
+          <table class="style1">
+            <tr>
+              <td style="font-weight:bold; color:#333333; background-color:#999999">
+                <span id="ContentPlaceHolder1_Label_ResultHeading">
+                  Results for B.Tech. 3<sup>rd</sup> Semester Examination, 2023
+                </span>
+              </td>
+            </tr>
+            <tr style="text-align:center;">
+              <td>
+                <br />
+                Enter your Registration Number:
+                <input name="ctl00$ContentPlaceHolder1$TextBox_RegNo" type="text" id="ContentPlaceHolder1_TextBox_RegNo" />
+                <input type="submit" name="ctl00$ContentPlaceHolder1$Button_Show" value="Show Result" id="ContentPlaceHolder1_Button_Show" onclick="rs()"/>
+                <br /><br />
+              </td>
+            </tr>
+            <tr>
+              <td style="color:Red; text-align:left;">
+                The results for a Registration Number cannot be found because of any of the following reasons:
+                <ul style="text-align:left; color:Black">
+                  <li>You may have entered a Wrong Registration Number.</li>
+                  <li>Your Registration Number does not belong to B.Tech.</li>
+                  <li>Your College may not have sent the Internal/Practical Assessment marks to the University. Please contact your college in this case.</li>
+                  <li>Your Result is on HOLD due some reasons.</li>
+                  <li>In case of any typological error or discrepancy, the student is required to report at their respective college for necessary intimation to the University.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td style="color:Red; text-align:left;">
+                Disclaimer:
+                <p style="color:Black">
+                  The results published are provisional and subject to change after post publication scrutiny by the University. The university shall not be held responsible for any inadvertent error that may have crept into the results being displayed.
+                </p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div id="copyright" class="clear">
+        <p class="fl_left">
+          Copyright &copy; 2023 onwards - All rights not reserved -
+          <a href="#">Bihar Engineering University, Patna</a>
+        </p>
+      </div>
+    </div>
+</div>
+
+
+  <script>
+    function rs(){
+    let data=document.getElementById("ContentPlaceHolder1_TextBox_RegNo").value;
+    if(!data){
+      alert("enter valid registration no.");
+    }else{
+        window.location.href="./result.html"
+    }
+    }
+   
+  </script>
+
+
+
+
+
+
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDIwWiEv11ljBpjJO_FoANW55qJzd0j8ys",
+    authDomain: "beu3rdsemresult.firebaseapp.com",
+    projectId: "beu3rdsemresult",
+    storageBucket: "beu3rdsemresult.firebasestorage.app",
+    messagingSenderId: "427022921695",
+    appId: "1:427022921695:web:e93ababa1d5c2ab5d85e6a",
+    measurementId: "G-0777X9C1GC"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+</body>
+</html>
